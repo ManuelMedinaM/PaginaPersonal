@@ -10,7 +10,7 @@ const IndexPage = () => {
       `}>
       <h1
         
-      >Esto pinta bien para un titulo</h1>
+      >Titulo</h1>
       <p>
         sa
 
