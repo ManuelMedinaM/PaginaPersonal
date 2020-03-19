@@ -100,5 +100,12 @@ export const ContenedorVinetas = styled.div`
     border-radius: 25px 0 0 25px;
     box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2) inset, 0 10px 26px;
     padding: 3rem .4rem;
+    @media(max-Width:800px) {
+        box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2) inset, 5px 4px 40px;
+        margin: 0 0px 10px 0;
+        padding: .4rem 3rem;
+        border-radius: 25px 25px 0 0px;
+        display: flex;
+      }  
 `
 

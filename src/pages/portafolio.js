@@ -16,22 +16,20 @@ const Portafolio = () => {
     <>
         <div
             css={css`
-            padding: 2rem 5rem 2rem 8rem;
-            height: 100%;
-            display: inline;
             `}
         >
             <div
                 css={css`
                    padding: 0rem 10rem;
                    text-Align: center;
+                   @media(max-Width:800px) {
+                        padding: 0rem 3rem;
+                    } 
 
                 `}
             >
                 <h1
                     css={css`
-                        padding: 0;
-                        margin: 0 0 1rem 0;
                     `}
                 >Mira mis trabajos</h1>
                 <p>Una pequeña coleccion de mis proyectos personales. La primera collecion son paginas webs estaticas desarrolladas con nueva tecnologia y la segunda son son aplicaciones webs 100% funcionales.</p>
@@ -46,7 +44,8 @@ const Portafolio = () => {
                     row-gap: 6rem;
                     column-gap:2rem;
                     @media(max-Width:800px) {
-                        row-gap: 19rem;
+                        row-gap: 3rem;
+                        grid-template-rows: auto auto;
                     }  
                 `}>
                 

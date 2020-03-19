@@ -43,6 +43,10 @@ const Carrusel = ({children}) => {
         justify-content: center;
         height: 100%;
         padding: 4rem 0;
+        @media(max-Width:800px) {
+          flex-Direction: column;
+
+        }  
         
       `}
       

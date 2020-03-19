@@ -6,7 +6,10 @@ const IndexPage = () => {
   return(
     <>
       <div css={css`
-                    padding: 2rem 8rem;
+          padding: 2rem 8rem;
+          @media(max-Width:800px) {
+            padding: 0rem 3rem;  
+          }  
       `}>
       <h1
         

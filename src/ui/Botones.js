@@ -98,7 +98,12 @@ export const ContenedorBoton = ({children})=>{
     const [props, set] = useSpring(() => ({ xys: [0, 0, 1], config: { mass: 5, tension: 350, friction: 40 } }));
     return(
     <animated.li
-     
+        css={css`
+            @media(max-Width:800px) {
+                transform:none !important;
+            }
+        
+        `}
         ref={liRef}
         onMouseMove={({ clientX: x, clientY: y }) => set({ xys: calc(x, y,liRef.current) })}
         onMouseLeave={() => set({ xys: [0, 0, 1] })}

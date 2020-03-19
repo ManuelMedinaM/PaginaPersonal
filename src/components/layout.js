@@ -33,6 +33,7 @@ const ContenedorInfo = styled.div`
         @media(max-Width:800px) {
             border-Radius: 0;
             width: 100%;
+            height: 100%;
         } 
        
         .tl-edges{

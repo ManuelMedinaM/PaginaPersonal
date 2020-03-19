@@ -25,7 +25,6 @@ const ContenedorInfoTrabajo = styled.div`
 const InformacionTrabajo = ({datos}) => {
     const{titulo,herramientas,imgaenesHerramientas,Descripcion,url} = datos;
 
-    console.log(Descripcion.split('\n'))
 
 
 
@@ -54,8 +53,9 @@ const InformacionTrabajo = ({datos}) => {
             </React.Fragment>
             )})}
           {
-            Descripcion.split('\n').map(parrafo=>(
+            Descripcion.split('\n').map((parrafo,index)=>(
               <p 
+              key={index}
               css={css`
                 margin: .1rem 0;
                 grid-column-start: 1;
