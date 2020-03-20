@@ -57,7 +57,7 @@ export const Boton2 = styled.a`
     font-family: 'Asap', sans-serif;
     box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.2),-22px -29px 12px rgba(0,0,0,.1) inset;
     transform:translate(0px,0px);
-    grid-column-start: 2;
+    grid-column-start: 1;
     grid-column-end: 6;
     background-image: linear-gradient(to right top, #2e42cb, #4840d7, #603de2, #7836ec, #902bf5, #902bf5, #902bf5, #902bf5, #7836ec, #603de2, #4840d7, #2e42cb);
     text-Align:center; 
@@ -85,6 +85,7 @@ export const Boton2 = styled.a`
             width: 100%;
 
     }
+    
     `
 
 

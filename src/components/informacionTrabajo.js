@@ -11,7 +11,7 @@ const ContenedorInfoTrabajo = styled.div`
           text-Align: center;
           display: grid;
           grid-template-columns: repeat(6,1fr)  ;
-          grid-template-row: repeat(6,1fr)  ;
+          grid-template-rows: repeat(7,auto)  ;
           align-content: baseline;
           align-Items: center;
           justify-Content: center;
