@@ -7,9 +7,9 @@ import { Vinetas } from '../ui/vinetasCarrusel';
 
 
 const adelante = {
-    from: { opacity: 0, transform: 'translate3d(-100%,0,0)' },
-    enter: { opacity: 1, transform: 'translate3d(0%,0,0)    ' },
-    leave: { opacity: 0, transform: 'translate3d(50%,0,0)' }
+    from: {opacity: 0, transform: 'translate3d(-100%,0,0)' },
+    enter: {opacity: 1, transform: 'translate3d(0%,0,0)    ' },
+    leave: {opacity: 0, transform: 'translate3d(0%,0,0)' }
   }
 const atras ={
     from: { opacity: 0, transform: 'translate3d(100%,0,0)' },
@@ -81,7 +81,16 @@ const Carrusel = ({children}) => {
           height: 100%;
         `}>
           {transitions.map(({item, props, key })=>
-            <animated.div  
+            <animated.div
+              css={
+                css`
+                @media(max-Width:800px) {
+                  position: initial!important;
+                  // transform:none !important;
+                  // opacity: initial !important;
+                }  
+                `
+              }  
               key={key} 
               style={props}
             >

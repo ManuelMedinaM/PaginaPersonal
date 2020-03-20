@@ -14,7 +14,7 @@ export const ContenedorCarrusel = styled.div`
 
     @media(max-Width:800px) {
         grid-Template-Columns:1fr;
-        grid-Template-rows: 48vh 42vh;
+        grid-Template-rows: 48vh auto;
         row-gap:3rem;        
         border-radius:0;
 
