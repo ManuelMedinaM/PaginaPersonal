@@ -39,6 +39,7 @@ export const ContenedorFoot = ({children,actuar})=>{
             color:white;
             padding: 0 1rem;
             text-Align: center;
+            font-Size:1.2rem; 
             @media(max-Width:800px) {
                position: absolute;
                display: none;
