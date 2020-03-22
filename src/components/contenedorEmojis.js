@@ -28,13 +28,13 @@ const ContenedorEmojis = () => {
                 oeste='2%'
             />
             <ContenedorEmoji
-                fluid={imagen.allFile.nodes[0].childImageSharp.fluid}
+                fluid={imagen.allFile.nodes[4].childImageSharp.fluid}
                 norte='38%'
                 oeste='10%'
             />
             <ContenedorEmoji
-                fluid={imagen.allFile.nodes[2].childImageSharp.fluid}
-                sur='20%'
+                fluid={imagen.allFile.nodes[3].childImageSharp.fluid}
+                sur='17%'
                 oeste='4%'
             />
         </>

@@ -73,8 +73,8 @@ const Carrusel = ({children}) => {
               {children[item].props.children[1]}
             </animated.div>
             )}
-            <Botones id="L" css={css` left: 10px;`} onClick={()=>{mover('L')}}>&#60;</Botones>
-            <Botones id="R" css={css`right: 10px;`} onClick={()=>{mover('R')}}>&#62;</Botones>
+            <Botones id="L" css={css` left: 0px;`} onClick={()=>{mover('L')}}>&#60;</Botones>
+            <Botones id="R" css={css`right: 0px;`} onClick={()=>{mover('R')}}>&#62;</Botones>
         </div>
         <div css={css`
           width: 100%;

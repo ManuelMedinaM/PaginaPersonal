@@ -5,6 +5,7 @@ import { useSpring, animated } from 'react-spring'
 import {css} from '@emotion/core';
 
 
+
 const Boton = styled(AniLink)`
     text-decoration:none;
     display: block;
@@ -130,7 +131,7 @@ export const ContenedorTitulo = ({children})=>{
         @media(max-Width:800px) {
             width: 100%;
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 5fr 3fr;;
             justify-items:center;
             align-Items: center;
             transform:none !important;
@@ -143,3 +144,24 @@ export const ContenedorTitulo = ({children})=>{
        {children}
     </animated.div>)
 } 
+
+
+
+
+
+export const BotonMenuR = styled.button`
+    background-color: ${props=>props.click ? '#ffffff78': '#fff0'};
+    background-Image: url(${props=>props.img});
+    width: 42px;
+    height: 30px;
+    border: none;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    border-radius: 6px;
+    @media(min-Width:800px){
+        display: none;
+    }
+
+`

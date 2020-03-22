@@ -1,15 +1,30 @@
 import React, { useState } from 'react';
 
 import {css} from '@emotion/core'
-import AniLink  from 'gatsby-plugin-transition-link/AniLink'
-import Boton,{ContenedorBoton,ContenedorTitulo} from '../ui/Botones';
-import { ContenedorMenu, ContenedorFoot, ContenedorDesc } from '../ui/contenedoresMenu';
-import ContenedorEmojis from './contenedorEmojis';
+import {graphql,useStaticQuery} from 'gatsby';
 import useSeo from '../hooks/useSeo';
+
+import ContenedorEmojis from './contenedorEmojis';
+import { ContenedorMenu, ContenedorFoot, ContenedorDesc } from '../ui/contenedoresMenu';
+import Boton,{ContenedorBoton,ContenedorTitulo, BotonMenuR} from '../ui/Botones';
+import AniLink  from 'gatsby-plugin-transition-link/AniLink'
 
 
 
 const MenuNav = () => {
+    const { file:{childImageSharp:{fluid:{src}}} } = useStaticQuery(
+        graphql`
+        query {
+            file(relativePath: {eq: "menu.png"}) {
+              childImageSharp {
+                fluid(maxHeight: 50, maxWidth: 50) {
+                    src
+                }
+              }
+            }
+          }          
+        `
+        )
     const [actuar,setActuar] = useState(false);
     const fecha =new Date().getFullYear();
     const {title,author} = useSeo(); 
@@ -48,11 +63,12 @@ const MenuNav = () => {
                 >
                     SpaceCode
                 </AniLink>
-                <button onClick={()=>{setActuar(actuar?false:true)}} className="boton-menu" css={css` @media(min-Width:800px){
-                    display: none;
-                }`} >
-                    ...
-                </button>
+                <BotonMenuR 
+                    onClick={()=>{setActuar(actuar?false:true)}}
+                    click = {actuar} 
+                    className="boton-menu" 
+                    img={src}
+                />
             </ContenedorTitulo>
             
             <ContenedorDesc

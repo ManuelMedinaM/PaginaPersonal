@@ -21,7 +21,7 @@ function SEO({lang}) {
         lang,
       }}
       title={title}
-      titleTemplate={`%s |Manuel Medina web`}
+      titleTemplate={`%s | Manuel Medina web`}
       link ={[
         {
           rel: "stylesheet",

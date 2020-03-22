@@ -77,7 +77,7 @@ export const SliderImage = styled(Image)`
 export const Botones = styled.button`
     width: 40px;
     height: 40px;
-    background: rgba(255, 255, 255, 0.7);
+    background-image: linear-gradient(to right top, #2e42cb, #4840d7, #603de2, #7836ec, #902bf5, #902bf5, #902bf5, #902bf5, #7836ec, #603de2, #4840d7, #2e42cb);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -88,8 +88,10 @@ export const Botones = styled.button`
     border-radius: 50%;
     font-family: monospace;
     cursor: pointer;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2) inset, 0 10px 26px;
+    border: none;
     :hover{
-        background: white;
+        background: #ffffffba;
     }
 `
 
