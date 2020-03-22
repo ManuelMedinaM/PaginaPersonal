@@ -3,8 +3,8 @@ import React from 'react';
 import {Global,css} from '@emotion/core';
 import styled from '@emotion/styled';
 
-import Helmet from 'react-helmet';
 import MenuNav from './menuNav';
+import SEO from './seo';
 
 const ContenedorInfo = styled.div`
         border-Radius: 55px 0px 0px 55px;
@@ -95,18 +95,7 @@ const Layout = ({children}) => {
                 `
             }
         />
-        <Helmet>
-               <title>Pagina Personal Manuel</title>
-             
-               <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
-               rel="stylesheet"
-               />
-
-               <link href="https://fonts.googleapis.com/css?family=Asap|Lato:700|Rubik&display=swap" rel="stylesheet"/> 
-              
-                <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-        </Helmet>
+        <SEO/>
         
         <div
             css={
@@ -133,6 +122,7 @@ const Layout = ({children}) => {
                     `
                 }
             >
+                
                 <MenuNav/>
             </div>
             <div

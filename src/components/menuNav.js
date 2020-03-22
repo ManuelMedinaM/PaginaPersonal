@@ -3,12 +3,16 @@ import React, { useState } from 'react';
 import {css} from '@emotion/core'
 import AniLink  from 'gatsby-plugin-transition-link/AniLink'
 import Boton,{ContenedorBoton,ContenedorTitulo} from '../ui/Botones';
-import { ContenedorMenu, ContenedorFoot } from '../ui/contenedoresMenu';
+import { ContenedorMenu, ContenedorFoot, ContenedorDesc } from '../ui/contenedoresMenu';
+import ContenedorEmojis from './contenedorEmojis';
+import useSeo from '../hooks/useSeo';
 
 
 
 const MenuNav = () => {
-    const [actuar,setActuar] = useState(false); 
+    const [actuar,setActuar] = useState(false);
+    const fecha =new Date().getFullYear();
+    const {title,author} = useSeo(); 
     return (
         <nav
             css={
@@ -42,7 +46,7 @@ const MenuNav = () => {
                         `
                     }
                 >
-                    Manuel
+                    SpaceCode
                 </AniLink>
                 <button onClick={()=>{setActuar(actuar?false:true)}} className="boton-menu" css={css` @media(min-Width:800px){
                     display: none;
@@ -50,6 +54,13 @@ const MenuNav = () => {
                     ...
                 </button>
             </ContenedorTitulo>
+            
+            <ContenedorDesc
+                actuar={actuar}
+            >
+                Bienvenidos a mi WebPersonal, donde podrás conocerme un poco mas y ver mis trabajos.
+            </ContenedorDesc>
+
             <ContenedorMenu
                 actuar={actuar}
             >
@@ -86,9 +97,12 @@ const MenuNav = () => {
             </ContenedorMenu>
             <ContenedorFoot
                 actuar={actuar}
-              
-            >Todos los derechos reservados
+            >
+                &#169;{title}{fecha}, hecho por {author}, realizado con Gatsby y Strapi.
             </ContenedorFoot>
+            <ContenedorEmojis
+            
+            />
         </nav>
 
     );
