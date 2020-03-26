@@ -55,7 +55,7 @@ const Portafolio = () => {
                     column-gap:2rem;
                     @media(max-Width:800px) {
                         row-gap: 3rem;
-                        grid-template-rows: auto 100%;
+                        grid-template-rows: auto auto;
                     }  
                 `}>
                 
