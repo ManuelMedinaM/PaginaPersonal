@@ -18,7 +18,7 @@ module.exports = {
         apiURL: 'https://mipaginapersonal-cms.herokuapp.com',
         contentTypes:[
           'trabajo',
-          'page',
+          'pagina',
           'user'
         ],
       },

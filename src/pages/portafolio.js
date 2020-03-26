@@ -6,11 +6,14 @@ import useApps from '../hooks/useApps';
 import Carrusel from '../components/carrusel';
 import SliderCarrusel from '../ui/sliderCarrusel';
 import InformacionTrabajo from '../components/informacionTrabajo';
+import { SeparadorMorado } from '../ui/separador';
+import usePortafolio from '../hooks/usePortafolio';
 
 
 const Portafolio = () => {
     const estaticos =useTrabajos();
     const apps =useApps();
+    const{strapiPagina:{desc,titulo}} = usePortafolio();
 
     return (
     <>
@@ -31,9 +34,16 @@ const Portafolio = () => {
                 <h1
                     css={css`
                     `}
-                >Mira mis trabajos</h1>
-                <p>Una pequeña coleccion de mis proyectos personales. La primera collecion son paginas webs estaticas desarrolladas con nueva tecnologia y la segunda son son aplicaciones webs 100% funcionales.</p>
-                <p>Puedes hacer click en el link y visitar cada proyecto online y probarlos.</p>
+                >{titulo}
+                <SeparadorMorado
+                    css={css`
+                        margin: 0 auto;
+                    `}
+                />
+                </h1>
+                {desc.split('\n').map((parrafo,index)=>(
+                    <p key={index}>{parrafo}</p>
+                ))}
             </div>
             <div css={
                 css`
@@ -66,6 +76,7 @@ const Portafolio = () => {
                         )})
                     }
                 </Carrusel>
+                
                 <Carrusel>
                     {apps.map((app,index)=>{
                         const{datos,imagenPrincipal} = app

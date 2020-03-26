@@ -4,10 +4,12 @@ import styled from '@emotion/styled'
 
 import Image from 'gatsby-image';
 import {Boton2} from '../ui/Botones'
+import { SeparadorMorado } from '../ui/separador';
 
 const ContenedorInfoTrabajo = styled.div`
           height: 100%;
           width: 100%;
+          padding: 0 2rem;
           text-Align: center;
           display: grid;
           grid-template-columns: repeat(6,1fr)  ;
@@ -25,9 +27,6 @@ const ContenedorInfoTrabajo = styled.div`
 const InformacionTrabajo = ({datos}) => {
     const{titulo,herramientas,imgaenesHerramientas,Descripcion,url} = datos;
 
-
-
-
     return (
         <ContenedorInfoTrabajo>
           <h1
@@ -35,8 +34,12 @@ const InformacionTrabajo = ({datos}) => {
             margin:0; 
             grid-column-start: 1;
             grid-column-end: -1;
+            font-Size: 2.8rem;
             `}
-          >{titulo}</h1>
+            >{titulo}
+            
+          <SeparadorMorado/>
+          </h1>
 
           {imgaenesHerramientas.map((imagen,index)=>{
 

@@ -86,8 +86,6 @@ const Carrusel = ({children}) => {
                 css`
                 @media(max-Width:800px) {
                   position: initial!important;
-                  // transform:none !important;
-                  // opacity: initial !important;
                 }  
                 `
               }  
@@ -99,7 +97,6 @@ const Carrusel = ({children}) => {
           )}
 
         </div>
-            
         </ContenedorCarrusel>
       </div>
     );

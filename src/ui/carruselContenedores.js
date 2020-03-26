@@ -45,7 +45,9 @@ export const ContenedorCarrusel = styled.div`
         }
 
         &:last-of-type{
-            box-shadow: initial;
+            background: #dadada42;
+            box-shadow: 2px 6px 18px;
+            border-radius: 7px;
             overflow-y:scroll;
             scrollbar-width: thin;
             ::-webkit-scrollbar {
