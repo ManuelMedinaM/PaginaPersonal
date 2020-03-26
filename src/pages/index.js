@@ -23,6 +23,7 @@ const IndexPage = () => {
       <h1
         css={css`
           align-Self: center;
+          line-height: 80px;
         
         `}
       >{titulo}
