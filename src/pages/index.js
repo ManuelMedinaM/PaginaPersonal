@@ -40,6 +40,8 @@ const IndexPage = () => {
           css={css`
             grid-column-start: 1;
             grid-column-end: -1;
+            word-break: break-all;
+            hyphens: auto;
           `}
         >
           {parrafo}

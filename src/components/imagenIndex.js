@@ -9,5 +9,8 @@ export const ImgIndex = styled(Image)`
     justify-self:center;
     height: 100%;
     width: 100%; 
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.2) inset, 0 10px 26px;
+
+
 
 `

@@ -70,6 +70,7 @@ export const Slider = styled.div`
 `
 
 export const SliderImage = styled(Image)`
+    border-radius:25px;
     display: block;
     width: 100%;
     height: 100%;

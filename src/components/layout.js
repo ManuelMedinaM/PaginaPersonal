@@ -96,10 +96,10 @@ const Layout = ({children}) => {
             }
         />
         <SEO/>
-        
-        <div
-            css={
-                css`
+        <>  
+            <div
+                css={
+                    css`
                     display: grid;
                     grid-Template-Columns: 1fr 5fr;
                     column-gap:2rem;
@@ -107,40 +107,41 @@ const Layout = ({children}) => {
                         grid-Template-Columns:1fr; 
                         grid-Template-rows: auto auto; 
                     } 
-                `
-            }
-        >
-            <div
-                css={
-                    css`
+                    `
+                }
+                >
+                <div
+                    css={
+                        css`
                         height: 100vh;
                         color: white;
                         @media(max-Width:800px) {
-                           position: relative;
-                           height: 100%;
-                        } 
-                    `
-                }
-            >
-                
-                <MenuNav/>
-            </div>
-            <div
-                css={
-                    css`
+                            position: relative;
+                            height: 100%;
+                            } 
+                            `
+                    }
+                    >
+                    
+                    <MenuNav/>
+                </div>
+                <div
+                    css={
+                        css`
                         padding: 4rem 0 0 0;
-                        @media(max-Width:800px) {
-                            padding: 0;
-                         } 
-                    `
-                }
-            >
-                <ContenedorInfo
+                            @media(max-Width:800px) {
+                                padding: 0;
+                            } 
+                            `
+                        }
                 >
-                    {children}
-                </ContenedorInfo>
+                    <ContenedorInfo
+                    >
+                        {children}
+                    </ContenedorInfo>
+                </div>
             </div>
-        </div>
+        </>
     </>
     )
 }
