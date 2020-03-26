@@ -51,6 +51,9 @@ const MenuNav = () => {
             <ContenedorTitulo>
                 <AniLink
                     to={"/"}
+                    swipe 
+                    top="exit"
+                    entryOffset={110}
                     css={
                         css`
                         font-size:4rem;
@@ -104,7 +107,10 @@ const MenuNav = () => {
                 </ContenedorBoton>
                 <ContenedorBoton>
                     <Boton
-                        to={"/"}
+                        swipe 
+                        top="exit"
+                        to={"/contacto"}
+                        entryOffset={110}
    
                     >
                         Contacto
