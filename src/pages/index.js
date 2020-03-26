@@ -33,7 +33,7 @@ const IndexPage = () => {
           css={css`margin: 0 auto;`} 
         />
       </h1>
-      <ImgIndex fadeIn={true} fluid={fluid}/>
+      <ImgIndex fadeIn={true} css={css`margin: 1rem;`} fluid={fluid}/>
       {desc.split('\n').map((parrafo,index)=>(
         <p
           key={index}

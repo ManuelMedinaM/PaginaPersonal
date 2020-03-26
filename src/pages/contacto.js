@@ -14,6 +14,7 @@ const Contacto = () => {
         text-Align:center; 
         padding: 2rem 8rem;
         overflow: hidden;
+        height: 100%;
 
         @media(max-Width:800px) {
           padding: 0rem 3rem;
