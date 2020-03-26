@@ -20,20 +20,28 @@ const IndexPage = () => {
             padding: 0rem 3rem;  
           }  
       `}>
-      <h1>{titulo}
+      <h1
+        css={css`
+          align-Self: center;
+        
+        `}
+      >{titulo}
         <SeparadorMorado
           css={css`margin: 0 auto;`} 
         />
       </h1>
-      <ImgIndex fluid={fluid}/>
-      <p
-        css={css`
-          grid-column-start: 1;
-          grid-column-end: -1;
-        `}
-      >
-        {desc}
-      </p>
+      <ImgIndex fadeIn={true} fluid={fluid}/>
+      {desc.split('\n').map((parrafo,index)=>(
+        <p
+          key={index}
+          css={css`
+            grid-column-start: 1;
+            grid-column-end: -1;
+          `}
+        >
+          {parrafo}
+        </p>
+      ))}
 
       </div>
 
