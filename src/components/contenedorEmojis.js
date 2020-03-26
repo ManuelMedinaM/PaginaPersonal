@@ -6,7 +6,7 @@ const ContenedorEmojis = () => {
     
     const imagen = useStaticQuery(graphql`
       query MyQueryEmoji {
-        allFile(filter: {sourceInstanceName: {eq: "images"}}) {
+        allFile(filter: {sourceInstanceName: {eq: "images"},relativePath: {ne: "menu.png"}}) {
           nodes {
             childImageSharp {
               fluid(maxHeight: 50, maxWidth: 50) {
@@ -23,12 +23,12 @@ const ContenedorEmojis = () => {
     return (
         <>
             <ContenedorEmoji
-                fluid={imagen.allFile.nodes[1].childImageSharp.fluid}
+                fluid={imagen.allFile.nodes[0].childImageSharp.fluid}
                 norte='15%'
                 oeste='2%'
             />
             <ContenedorEmoji
-                fluid={imagen.allFile.nodes[4].childImageSharp.fluid}
+                fluid={imagen.allFile.nodes[2].childImageSharp.fluid}
                 norte='38%'
                 oeste='10%'
             />
