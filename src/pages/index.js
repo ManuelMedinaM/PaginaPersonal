@@ -17,7 +17,9 @@ const IndexPage = () => {
           padding: 2rem 8rem;
 
           @media(max-Width:800px) {
-            padding: 0rem 3rem;  
+            padding: 0rem 3rem;
+            grid-Template-Columns: 1fr;
+            grid-template-rows: auto;  
           }  
       `}>
       <h1
