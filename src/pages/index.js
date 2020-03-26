@@ -18,6 +18,7 @@ const IndexPage = () => {
 
           @media(max-Width:800px) {
             padding: 0rem 3rem;
+            row-Gap:3rem; 
             grid-Template-Columns: 1fr;
             grid-template-rows: auto;  
           }  
