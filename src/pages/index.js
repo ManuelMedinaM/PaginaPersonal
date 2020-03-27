@@ -15,10 +15,10 @@ const IndexPage = () => {
           grid-template-rows: auto;
           text-Align:center; 
           padding: 2rem 8rem;
+          row-Gap:3rem; 
 
           @media(max-Width:800px) {
             padding: 0rem 3rem;
-            row-Gap:3rem; 
             grid-Template-Columns: 1fr;
             grid-template-rows: auto;  
           }  

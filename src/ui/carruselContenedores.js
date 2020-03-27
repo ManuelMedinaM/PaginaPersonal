@@ -11,14 +11,20 @@ export const ContenedorCarrusel = styled.div`
     grid-Template-Columns: 1fr 1fr;
     column-Gap: 5rem;
     position: relative;
-
-    @media(max-Width:800px) {
-        grid-Template-Columns:1fr;
-        grid-Template-rows: 48vh auto;
-        row-gap:3rem;        
-        border-radius:0;
-
-    } 
+    
+    
+        @media(min-Width:1600px) {
+            width: 100%;
+            max-width: 1080px;
+        } 
+    
+        @media(max-Width:800px) {
+            grid-Template-Columns:1fr;
+            grid-Template-rows: 48vh auto;
+            row-gap:3rem;        
+            border-radius:0;
+    
+        } 
     
     >div{
         overflow: hidden; 
