@@ -4,8 +4,11 @@ import {css} from '@emotion/core';
 
 import { SeparadorMorado } from '../ui/separador';
 import InfoContacto from '../components/infoContacto';
+import useContacto from '../hooks/useContacto';
 
 const Contacto = () => {
+    const {titulo,resultado} = useContacto();
+    console.log(titulo, resultado);
     return (
         <div css={css`
         display:grid;
@@ -27,21 +30,20 @@ const Contacto = () => {
           line-height: 80px;
         
         `}
-      >Vias para contactarme
+      >
+        {titulo}
         <SeparadorMorado
           css={css`margin: 0 auto;`} 
         />
         </h1>
-
-        <InfoContacto
-            contenido="holaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
-        />
-        <InfoContacto
-            contenido="holaaaaaaaaaaaa aaaaaaaaaaaaaaaaaaa  aaaaaaaaaaaaaa"
-        />
-        <InfoContacto
-            contenido="holaaaaaaaaaaaaaa aaaaaaaaaaaaaaaa aaaaaaaaaaaaaaa"
-        />
+        {
+          resultado.map((dato,index)=>(
+            <InfoContacto
+              key={index}
+              imagen={dato.src}
+              contenido={dato.parrafo}
+            />
+        ))}
     </div>
     );
 };

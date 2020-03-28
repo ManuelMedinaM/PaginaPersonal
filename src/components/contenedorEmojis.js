@@ -5,35 +5,48 @@ import { ContenedorEmoji } from '../ui/imgenesAnimadas';
 const ContenedorEmojis = () => {
     
     const imagen = useStaticQuery(graphql`
-      query MyQueryEmoji {
-        allFile(filter: {sourceInstanceName: {eq: "images"},relativePath: {ne: "menu.png"}}) {
-          nodes {
-            childImageSharp {
-              fluid(maxHeight: 50, maxWidth: 50) {
-                ...GatsbyImageSharpFluid
-              }
+      query MyQueryEmoji{
+        image1: file(relativePath: {eq: "luna.png"}) {
+          childImageSharp {
+            fluid(maxHeight: 50, maxWidth: 50) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image2: file(relativePath: {eq: "saturno.png"}) {
+          childImageSharp {
+            fluid(maxHeight: 50, maxWidth: 50) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        image3: file(relativePath: {eq: "tierra.png"}) {
+          childImageSharp {
+            fluid(maxHeight: 50, maxWidth: 50) {
+              ...GatsbyImageSharpFluid
             }
           }
         }
       }
-          
+       
     `)
+    console.log(imagen)
 
 
     return (
         <>
             <ContenedorEmoji
-                fluid={imagen.allFile.nodes[0].childImageSharp.fluid}
+                fluid={imagen.image1.childImageSharp.fluid}
                 norte='15%'
                 oeste='2%'
             />
             <ContenedorEmoji
-                fluid={imagen.allFile.nodes[2].childImageSharp.fluid}
+                fluid={imagen.image2.childImageSharp.fluid}
                 norte='38%'
                 oeste='10%'
             />
             <ContenedorEmoji
-                fluid={imagen.allFile.nodes[1].childImageSharp.fluid}
+                fluid={imagen.image3.childImageSharp.fluid}
                 sur='17%'
                 oeste='4%'
             />
