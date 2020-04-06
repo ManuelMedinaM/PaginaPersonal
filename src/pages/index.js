@@ -35,8 +35,9 @@ const IndexPage = () => {
         />
       </h1>
       <ImgIndex fadeIn={true} css={css`margin: 1rem;`} fluid={fluid}/>
-      {desc.split('\n').map((parrafo,index)=>(
-        <p
+      {desc.split('\n').map((parrafo,index)=>{     
+        return(
+        <div
           key={index}
           css={css`
             text-Align: justify;
@@ -48,8 +49,8 @@ const IndexPage = () => {
           `}
         >
           {parrafo}
-        </p>
-      ))}
+        </div>
+      )})}
 
       </div>
 

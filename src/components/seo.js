@@ -30,6 +30,10 @@ function SEO({lang}) {
         {
           rel: "stylesheet",
           href: "https://fonts.googleapis.com/css?family=Asap|Lato:700|Rubik&display=swap",
+        },
+        {
+          rel: "stylesheet",
+          href:"https://fonts.googleapis.com/css2?family=Rubik:wght@700&display=swap",
         }
       ]}
       meta={[
