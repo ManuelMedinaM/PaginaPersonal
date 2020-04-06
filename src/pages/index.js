@@ -39,6 +39,7 @@ const IndexPage = () => {
         <p
           key={index}
           css={css`
+            text-Align: justify;
             margin:0;
             grid-column-start: 1;
             grid-column-end: -1;
