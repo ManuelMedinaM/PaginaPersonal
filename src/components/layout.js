@@ -7,6 +7,10 @@ import MenuNav from './menuNav';
 import SEO from './seo';
 
 const ContenedorInfo = styled.div`
+        div{
+            word-break: break-word!important;
+            hyphens: auto!important;
+        }
         border-Radius: 55px 0px 0px 55px;
         width: 90%;
         margin: 0 auto;

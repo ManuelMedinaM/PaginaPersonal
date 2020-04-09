@@ -12,7 +12,7 @@ const InfoContacto = ({imagen, contenido}) => {
                 display: grid;
                 justify-items: center;
                 align-items: center;
-                word-break: break-all;
+                word-break: break-word;
                 hyphens: auto;
                 margin: 2rem 0;
                 background: #FFF;
