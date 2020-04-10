@@ -8,8 +8,8 @@ import SEO from './seo';
 
 const ContenedorInfo = styled.div`
         div{
-            word-break: break-word!important;
-            hyphens: auto!important;
+            word-break: break-word;
+            hyphens: unset!important;
         }
         border-Radius: 55px 0px 0px 55px;
         width: 90%;
@@ -58,9 +58,7 @@ const ContenedorInfo = styled.div`
         .tl-edges>div{
             height:100%;
         }
-
-
-  
+ 
 `
 
 const Layout = ({children}) => {

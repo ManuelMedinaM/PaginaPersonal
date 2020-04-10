@@ -52,7 +52,8 @@ export const Boton2 = styled.a`
     font-weight: 300;
     text-transform: uppercase;
     padding: 1rem 1rem;
-    margin: .2rem auto;
+    margin: 0;
+    margin-left:1.2rem;
     text-align:center;
     color: #fff;
     font-family: 'Asap', sans-serif;

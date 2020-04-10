@@ -11,17 +11,13 @@ const ContenedorInfoTrabajo = styled.div`
           width: 100%;
           padding: 0 2rem;
           text-Align: center;
-          display: grid;
-          grid-template-columns: repeat(6,1fr)  ;
-          grid-template-rows: repeat(7,auto)  ;
-          align-content: baseline;
+          display: flex;
+          flex-direction:column;
           align-Items: center;
-          justify-Content: center;
           font-size:1.8rem;
           font-family: 'Rubik', sans-serif;
           line-height : 1.8;
-          column-gap:1rem;
-          row-gap:1rem;
+
 `
 
 const InformacionTrabajo = ({datos}) => {
@@ -40,21 +36,55 @@ const InformacionTrabajo = ({datos}) => {
             
           <SeparadorMorado/>
           </h1>
+          <div
+          css={css`
+            margin: 2rem 0;
+            display: grid;
+            align-items:center; 
+            justify-Content: center;
+            grid-Template-Columns:repeat(3,1fr);
+            @media(max-width:800px){
+              column-gap: 2rem;
+            }
+          `}>
+            {imgaenesHerramientas.map((imagen,index)=>{
 
-          {imgaenesHerramientas.map((imagen,index)=>{
+              if(imagen=== null || imagen=== undefined) return null;
+              return(
+              <div
+                css={css`
+                  display: grid;
+                  align-items:center; 
+                  justify-Content: center;
+                  grid-Template-Columns:repeat(2,1fr);
+                  @media(max-Width:800px) {
+                    grid-Template-Columns: repeat(auto-fill, 100%);
+                    height: 100%;
+                    justify-self: center;
+                    } 
+                `}
+                key={index}
+              >
+                <div
+                  css={css`
+                  word-break: initial!important;
+                  @media(max-width:800px){
+                    align-self: self-end;
+                  }`}
+                >{herramientas[index]}</div>
+                <div
+                  css={css`@media(max-width:800px){
+                    align-self: self-start;
+                }`}>
+                  <Image css={css`
+                      max-Width: 40px;
+                      max-height: 40px;
+                  `} cover  fluid={imagen.childImageSharp.fluid}/>
+                </div>
+              </div>
+              )})}
+          </div>
 
-            if(imagen=== null || imagen=== undefined) return null;
-            return(
-            <React.Fragment
-              key={index}
-            >
-              <div>{herramientas[index]}</div>
-              <Image css={css`
-                  max-Width: 40px;
-                  max-height: 40px;
-              `} cover  fluid={imagen.childImageSharp.fluid}/>
-            </React.Fragment>
-            )})}
           {
             Descripcion.split('\n').map((parrafo,index)=>(
               <p 
