@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `SpaceCode`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Un programador autodidacta y entusiasta, que siempre está en búsqueda de nuevos proyectos de programación web. Entra, mira mis trabajos y conóceme.`,
     author: `Manuel Medina`,
   },
   plugins: [
